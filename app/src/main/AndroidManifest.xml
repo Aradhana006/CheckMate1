@@ -2,8 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -30,10 +36,35 @@
             android:label="@string/app_name"
             android:exported="false" />
 
+        <!-- Attendance Activities -->
         <activity android:name=".ui.notifications.ScannerActivity" />
+        <activity android:name=".attendance.AttendanceMainActivity" 
+            android:label="Attendance System" />
+        <activity android:name=".attendance.ScanAttendanceActivity" 
+            android:label="Scan Attendance"
+            android:screenOrientation="portrait" />
+        <activity android:name=".attendance.OCRScanActivity" 
+            android:label="OCR Scan" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".attendance.ManualEntryActivity" 
+            android:label="Manual Entry" />
+        <activity android:name=".attendance.ImportStudentsActivity" 
+            android:label="Import Students" />
+        <activity android:name=".attendance.ExportReportActivity" 
+            android:label="Export Report" />
+        <activity android:name=".attendance.AttendanceHistoryActivity" 
+            android:label="Attendance History" />
 
-
-        <!-- Removed HomeActivity declaration if it existed -->
+        <!-- FileProvider for sharing files -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
     </application>
 

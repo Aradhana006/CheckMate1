@@ -26,4 +26,21 @@
     <string name="event_description">Event Description</string>
     <string name="view_attendance">View Attendance</string>
     <string name="move_to_downloads">Move to Downloads</string>
+    
+    <!-- Attendance Module Strings -->
+    <string name="attendance_system">Attendance System</string>
+    <string name="scan_qr_barcode">Scan QR/Barcode</string>
+    <string name="ocr_scan">OCR Scan</string>
+    <string name="manual_entry">Manual Entry</string>
+    <string name="import_students">Import Students</string>
+    <string name="export_report">Export Report</string>
+    <string name="attendance_history">Attendance History</string>
+    <string name="mark_present">Mark Present</string>
+    <string name="student_not_found">Student not found</string>
+    <string name="duplicate_entry">Duplicate Entry</string>
+    <string name="attendance_marked">Attendance marked</string>
+    <string name="invalid_roll_number">Invalid roll number</string>
+    <string name="permission_required">Permission required for full functionality</string>
+    <string name="export_successful">Report exported successfully</string>
+    <string name="import_successful">Students imported successfully</string>
 </resources>
